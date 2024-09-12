@@ -1,9 +1,6 @@
-
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
-import 'package:provider/provider.dart';
 import 'package:shop_app/providers/user_provider.dart';
 
 import '../models/user_model.dart';

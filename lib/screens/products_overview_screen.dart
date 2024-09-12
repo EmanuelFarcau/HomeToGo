@@ -1,15 +1,14 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'package:shop_app/providers/product.dart';
 import 'package:shop_app/widgets/app_drawer.dart';
-import 'package:shop_app/widgets/badge.dart';
 
 import '../providers/cart.dart';
-import '../providers/products.dart';
 import '../providers/product.dart' as pr;
+import '../providers/products.dart';
 import '../widgets/products_grid.dart';
 import './cart_screen.dart';
 
@@ -98,7 +97,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
           Consumer<Cart>(
             builder: (_, cart, ch) => Badge(
               child: ch!,
-              value: cart.itemCount.toString(),
+              label: Text(cart.itemCount.toString()),
             ),
             child: IconButton(
               icon: Icon(

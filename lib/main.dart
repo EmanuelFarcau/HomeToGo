@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app/providers/auth.dart';
@@ -9,8 +8,6 @@ import 'package:shop_app/providers/order_provider.dart';
 import 'package:shop_app/providers/orders.dart';
 import 'package:shop_app/providers/product.dart';
 import 'package:shop_app/providers/user_provider.dart';
-import 'package:shop_app/widgets/product_item.dart';
-import './providers/auth.dart';
 import 'package:shop_app/screens/cart_screen.dart';
 
 import './screens/products_overview_screen.dart';
@@ -22,7 +19,6 @@ import './screens/edit_product_screen.dart';
 import './screens/auth_screen.dart';
 
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
 import 'models/user_model.dart';
 
 void main() async {
@@ -60,11 +56,10 @@ class MyApp extends StatelessWidget {
         title: 'MyShop',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSwatch().copyWith(
-            primary: Color.fromARGB(255, 55, 73, 87),
-          ),
-          // primarySwatch: Colors.purple,
-          accentColor: Color.fromARGB(222, 209, 202, 172),
-          backgroundColor: Color.fromARGB(255, 55, 73, 87),
+              primary: Color.fromARGB(255, 55, 73, 87),
+              secondary: Color.fromARGB(222, 209, 202, 172),
+              background: Color.fromARGB(255, 55, 73, 87)),
+          secondaryHeaderColor: Color.fromARGB(222, 209, 202, 172),
           fontFamily: 'Lato',
         ),
         home: MainPage(),

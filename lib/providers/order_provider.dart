@@ -1,9 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:shop_app/models/order_model.dart';
-import 'package:shop_app/providers/cart.dart';
-import 'package:shop_app/repository/user_repository.dart';
-
-import '../models/user_model.dart';
 import '../repository/order_repository.dart';
 
 class OrderProvider with ChangeNotifier {

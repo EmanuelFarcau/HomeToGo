@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shop_app/api/firebase-api.dart';
 import 'package:shop_app/models/order_model.dart';
-import 'package:shop_app/models/user_model.dart';
+
 
 class OrderRepository {
   Api orderApi = Api('orders');
